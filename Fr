@@ -1,0 +1,2511 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FoeBXS</title>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<style>
+body {
+background: black;
+color: blue;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.introtitle {
+color: blue;
+font-size: 40px;
+position: absolute;
+z-index: 0;
+left: 50%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.sidemenu {
+width: 25%;
+position: absolute;
+z-index: 100000;
+height: 100%;
+background: black;
+border: 5px blue solid;
+top: 0%;
+left: -50%;
+color: blue;
+text-align: center;
+font-size: 200%;
+transition: 1s;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.sidemenu-open {
+left: 0%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.updatelog {
+background: black;
+width: 400px;
+height: 500px;
+position: absolute;
+left: 35%;
+top: 0%;
+font-size: 30px;
+text-align: center;
+color: yellow;
+z-index: 4;
+visibility: hidden;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.ulbutton {
+cursor: pointer;
+position: absolute;
+top: 0%;
+left: 0%;
+background: black;
+color: red;
+border: 3px red solid;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.updatelogBackground {
+opacity: 0.3;
+width: 100%;
+height: 100%;
+background: white;
+position: absolute;
+top: 0%;
+left: 0%;
+z-index: 3;
+visibility: hidden;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.updatelog {
+background: black;
+width: 400px;
+height: 500px;
+position: absolute;
+left: 35%;
+top: 0%;
+font-size: 30px;
+text-align: center;
+color: yellow;
+z-index: 4;
+visibility: hidden;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.menu {
+background: #4F4948;
+width: 100%;
+height: 100%;
+z-index: 1;
+border: 5px blue solid;
+position: absolute;
+top: 0%;
+left: 0%;
+font-size: 40px;
+text-align: center;
+color: white;
+visibility: hidden;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.gamesUI {
+z-index: 2;
+background: black;
+color: white;
+width: 10%;
+height: 20%;
+top: 25%;
+left: 30%;
+position: absolute;
+justify-content: center;
+border: 3px white solid;
+border-radius: 10px;
+cursor: pointer;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.gamesUI:hover {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+background: grey;
+border: 3px grey solid;
+cursor: pointer;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.othersUI {
+z-index: 2;
+background: white;
+color: black;
+width: 10%;
+height: 20%;
+top: 25%;
+left: 60%;
+position: absolute;
+justify-content: center;
+border: 3px black solid;
+border-radius: 10px;
+cursor: pointer;
+font-size: 30px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.othersUI:hover {
+background: grey;
+border: 3px grey solid;
+cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.updatelogUI {
+width: 100px;
+height: 25px;
+position: absolute;
+background: yellow;
+color: black;
+font-size: 15px;
+top: 10%;
+left: 10%;
+border-radius: 20px;
+cursor: pointer;
+font-family: sans-serif;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.updatelogUI:hover {
+background: #FFFFE0;
+font-size: 15px;
+cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.gameUI {
+height: 100%;
+width: 100%;
+position: absolute;
+top: 0%;
+left: 0%;
+background: blue;
+border: 5px black solid;
+color: white;
+font-size: 40px;
+text-align: center;
+visibility: hidden;
+z-index: 2;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.gamespage {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+position: absolute;
+top: 0%;
+left: 0%;
+width: 100%;
+height: 100%;
+background: black;
+color: blue;
+font-size: 150%;
+text-align: center;
+font-family: monospace;
+visibility: hidden;
+z-index: 10;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.gamespage button {
+position: absolute;
+top: 0%;
+left: 0%;
+width: 10%;
+height: 7%;
+background: black;
+border: 5px red solid;
+color: red;
+cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.gamblinggameclass {
+width: 100%;
+position: absolute;
+height: 100%;
+background: grey;
+top: 0%;
+left: 0%;
+z-index: 100;
+visibility: hidden;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.gamblinggameembed {
+position: absolute;
+top: 10%;
+left: 25%;
+width: 50%;
+height: 75%;
+border: 5px black solid;
+z-index: 10;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.investorrestclass {
+width: 100%;
+position: absolute;
+height: 100%;
+background: grey;
+top: 0%;
+left: 0%;
+z-index: 100;
+visibility: hidden;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.investorrestembed {
+position: absolute;
+top: 10%;
+left: 25%;
+width: 50%;
+height: 75%;
+border: 5px black solid;
+z-index: 10;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.fightingsimclass {
+width: 100%;
+position: absolute;
+height: 100%;
+background: grey;
+top: 0%;
+left: 0%;
+z-index: 100;
+visibility: hidden;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.fightingsimembed {
+position: absolute;
+top: 10%;
+left: 25%;
+width: 50%;
+height: 75%;
+border: 5px black solid;
+z-index: 10;
+}
+
+
+
+
+
+
+
+
+.exterminationclass {
+width: 100%;
+position: absolute;
+height: 100%;
+background: grey;
+top: 0%;
+left: 0%;
+z-index: 100;
+visibility: hidden;
+}
+
+
+
+
+
+
+
+
+.exterminationembed {
+position: absolute;
+top: 10%;
+left: 25%;
+width: 50%;
+height: 75%;
+border: 5px black solid;
+z-index: 10;
+}
+
+
+
+
+.teacherexeclass {
+width: 100%;
+position: absolute;
+height: 100%;
+background: grey;
+top: 0%;
+left: 0%;
+z-index: 100;
+visibility: hidden;
+}
+
+
+
+
+.teacherexeembed {
+position: absolute;
+top: 10%;
+left: 25%;
+width: 50%;
+height: 75%;
+border: 5px black solid;
+z-index: 10;
+}
+
+
+.investorrest2class {
+width: 100%;
+position: absolute;
+height: 100%;
+background: grey;
+top: 0%;
+left: 0%;
+z-index: 100;
+visibility: hidden;
+}
+
+
+.investorrest2embed {
+position: absolute;
+top: 10%;
+left: 25%;
+width: 50%;
+height: 75%;
+border: 5px black solid;
+z-index: 10;
+}
+
+
+
+
+.otherspage {
+position: absolute;
+top: 0%;
+left: 0%;
+width: 100%;
+height: 100%;
+background: black;
+color: blue;
+font-size: 150%;
+text-align: center;
+font-family: monospace;
+visibility: hidden;
+z-index: 10;
+}
+.otherspage button {
+position: absolute;
+top: 0%;
+left: 0%;
+width: 10%;
+height: 7%;
+background: black;
+border: 5px red solid;
+color: red;
+cursor: pointer;
+}
+
+
+
+
+.linkopenerclass{
+width: 100%;
+position: absolute;
+height: 100%;
+background: grey;
+top: 0%;
+left: 0%;
+z-index: 100;
+visibility: hidden;
+}
+
+
+
+
+
+
+
+
+
+
+.linkopenerembed{
+position: absolute;
+top: 10%;
+left: 25%;
+width: 50%;
+height: 75%;
+border: 5px black solid;
+z-index: 10;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.open {
+visibility: visible;
+}
+</style>
+
+
+
+
+<div class="sidemenu">FoeBXS
+
+
+
+
+</div>
+<h2 class="introtitle">FoeBXS</h2>
+<progress
+style="position:absolute;top:75%; left:50%; border-radius:10px; background-color:#eee; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset; z-index:0;"
+id="loadingintro" max="100"></progress>
+<div class="updatelogBackground"></div>
+<div class="updatelog">Update Log
+<button onclick="closeUpdateLog()" class="ulbutton">Close</button>
+<h2>Beta testing, that's really it.</h2>
+</div>
+<div class="menu">Menu
+<div class="gamesUI" onclick="opengames()">Games</div>
+<div class="othersUI" onclick="openothers()">Others</div>
+<div class="updatelogUI" onclick="openUpdateLog()">Update Log</div>
+</div>
+<div class="gamespage">Games
+<button onclick="closegames()">Close</button>
+<h3 onclick="gamlinggame()"
+style="position:absolute; top:5%; left:5%; background:yellow; color:black; border:2px black solid; width:15%; height:13%; cursor:pointer;">
+Gambling game</h3>
+<h3 onclick="openinvestorrest()"
+style="position:absolute; top:25%; left:5%; background:green; color:black; border:2px black solid; width:15%; height:13%; cursor:pointer;">
+Invest or rest</h3>
+<h3 onclick="openfightingsim()"
+style="position:absolute; top:45%; left:5%; background:red; color:black; border:2px black solid; width:15%; height:13%; cursor:pointer;">
+Fighting Simulator</h3>
+<h3 onclick="openextermination()"
+style="position:absolute; top:65%; left:5%; background:yellow; color:black; border:2px black solid; width:15%; height:13%; cursor:pointer;">
+Extermination</h3>
+<h3 onclick="openteacherexe()"
+style="position:absolute; top:5%; left:25%; background:red; color:black; border:2px black solid; width:15%; height:13%; cursor:pointer;">
+Teacher.exe</h3>
+<h3 onclick="openinvestorrest2()"
+style="position:absolute; top:25%; left:25%; background:blue; color:black; border:2px black solid; width:15%; height:13%; cursor:pointer;">
+Invest or rest 2</h3>
+
+
+
+
+
+
+
+
+</div>
+<div class="gamblinggameclass">
+<h2 style="position:absolute; top:1%; left:45%; color:black;">Gambling game</h2>
+<embed src="https://html.cafe/x75c17407" class="gamblinggameembed"></embed>
+<button onclick="closegamblinggame()" style="position:absolute; top:0%; left:0%; background:grey; border:5px black solid; color:black; cursor:pointer; width:10%; height:5%; ">Close</button>
+<button onclick="fullscreengamblinggame()" style="position:absolute; top:90%; left:0%; width:10%; height:5%; border-radius:50px; color:black; background:white; z-index:11;"><span id="fullscreengamblinggameID">Full Screen</span></button>
+</div>
+<div class="investorrestclass">
+<h2 style="position:absolute; top:1%; left:45%; color:black;">Invest or rest</h2>
+<embed src="https://html.cafe/x9fbc9745" class="investorrestembed"></embed>
+<button onclick="closeinvestorrest()" style="position:absolute; top:0%; left:0%; background:grey; border:5px black solid; color:black; cursor:pointer; width:10%; height:5%; ">Close</button>
+<button onclick="fullscreeninvestorrest()" style="position:absolute; top:90%; left:0%; width:10%; height:5%; border-radius:50px; color:black; background:white; z-index:11;"><span id="fullscreeninvestorrestID">Full Screen</span></button>
+</div>
+<div class="fightingsimclass">
+<h2 style="position:absolute; top:1%; left:45%; color:black;">Fighting simulator</h2>
+<embed src="https://html.cafe/xd13b9601" class="fightingsimembed"></embed>
+<button onclick="closefightingsim()" style="position:absolute; top:0%; left:0%; background:grey; border:5px black solid; color:black; cursor:pointer; width:10%; height:5%; ">Close</button>
+<button onclick="fullscreenfightingsim()" style="position:absolute; top:90%; left:0%; width:10%; height:5%; border-radius:50px; color:black; background:white; z-index:11;"><span id="fullscreenfightingsimID">Full Screen</span></button>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+<div class="exterminationclass">
+<h2 style="position:absolute; top:1%; left:45%; color:black;">Extermination</h2>
+<embed src="https://html.cafe/xd6cd9af1" class="exterminationembed"></embed>
+<button onclick="closeextermination()" style="position:absolute; top:0%; left:0%; background:grey; border:5px black solid; color:black; cursor:pointer; width:10%; height:5%; ">Close</button>
+<button onclick="fullscreenextermination()" style="position:absolute; top:90%; left:0%; width:10%; height:5%; border-radius:50px; color:black; background:white; z-index:11;"><span id="fullscreenIDextermination">Full Screen</span></button>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+<div class="teacherexeclass">
+<h2 style="position:absolute; top:1%; left:45%; color:black;">Teacher.exe</h2>
+<embed src="https://html.cafe/xf5c27de4" class="teacherexeembed"></embed>
+<button onclick="closeteacherexe()" style="position:absolute; top:0%; left:0%; background:grey; border:5px black solid; color:black; cursor:pointer; width:10%; height:5%; ">Close</button>
+<button onclick="fullscreenteacherexe()" style="position:absolute; top:90%; left:0%; width:10%; height:5%; border-radius:50px; color:black; background:white; z-index:11;"><span id="fullscreenIDteacherexe">Full Screen</span></button>
+</div>
+
+
+
+
+<div class="investorrest2class">
+<h2 style="position:absolute; top:1%; left:45%; color:black;">Invest or rest 2</h2>
+<embed src="https://html.cafe/xe330f9eb" class="investorrest2embed"></embed>
+<button onclick="closeinvestorrest2()" style="position:absolute; top:0%; left:0%; background:grey; border:5px black solid; color:black; cursor:pointer; width:10%; height:5%; ">Close</button>
+<button onclick="fullscreeninvestorrest2()" style="position:absolute; top:90%; left:0%; width:10%; height:5%; border-radius:50px; color:black; background:white; z-index:11;"><span id="fullscreenIDinvestorrest2">Full Screen</span></button>
+</div>
+
+
+<div class="otherspage">Others
+<button onclick="closeothers()">Close</button>
+<h3 onclick="openlinkopener()"
+style="position:absolute; top:5%; left:5%; background:skyblue; color:black; border:2px black solid; width:15%; height:13%; cursor:pointer;">
+Link opener</h3>
+
+
+
+
+</div>
+
+
+
+
+<div class="linkopenerclass">
+<h2 style="position:absolute; top:1%; left:45%; color:black;">Link opener</h2>
+<embed src="https://html.cafe/x9c5c4cd6" class="linkopenerembed"></embed>
+<button onclick="closelinkopener()" style="position:absolute; top:0%; left:0%; background:grey; border:5px black solid; color:black; cursor:pointer; width:10%; height:5%; ">Close</button>
+<button onclick="fullscreenlinkopener()" style="position:absolute; top:90%; left:0%; width:10%; height:5%; border-radius:50px; color:black; background:white; z-index:11;"><span id="fullscreenIDlinkopener">Full Screen</span></button>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+let sidemenuvar = document.querySelector('.sidemenu');
+let menuvar = document.querySelector('.menu');
+let sidemanuvarforaddeventlistener = 0;
+let introvalue = 0;
+let fullscreenIDgamblinggame = "Full screen";
+let fullscreenIDinvestorrest = "Full screen";
+let fullscreenIDfightingsim = "Full screen";
+let fullscreenIDextermination = "Full screen";
+let fullscreenteacherexeID = "Full screen";
+let fullscreenIDinvestorrest2 = "Full screen";
+let fullscreenIDlinkopener = "Full screen";
+let introtick = Math.floor(Math.random() * 150 + 1);
+let updatelog = document.querySelector(".updatelog");
+let updatelogBackground = document.querySelector(".updatelogBackground");
+let gamespagevar = document.querySelector('.gamespage');
+let gamblinggameembedvar = document.querySelector('.gamblinggameembed');
+let gamblinggameclassvar = document.querySelector('.gamblinggameclass');
+let investorrestclassvar = document.querySelector('.investorrestclass');
+let investorrestembevar = document.querySelector('.investorrestembed');
+let fightingsimclassvar = document.querySelector('.fightingsimclass');
+let fightingsimembedvar = document.querySelector('.fightingsimembed');
+let exterminationclassvar = document.querySelector('.exterminationclass');
+let exterminationembedvar = document.querySelector('.exterminationembed');
+let teacherexeclassvar = document.querySelector('.teacherexeclass');
+let teacherexeembedvar = document.querySelector('.teacherexeembed');
+let investorrest2classvar = document.querySelector('.investorrest2class');
+let investorrest2embedvar = document.querySelector('.investorrest2embed');
+let linkopenerclassvar = document.querySelector('.linkopenerclass');
+let linkopenerembedvar = document.querySelector('.linkopenerembed');
+let runonce = false;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+let introloading;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+let otherspagevar = document.querySelector('.otherspage');
+
+
+
+
+setInterval(function(){
+document.getElementById("fullscreengamblinggameID").innerHTML = fullscreenIDgamblinggame;
+document.getElementById("fullscreeninvestorrestID").innerHTML = fullscreenIDinvestorrest;
+document.getElementById("fullscreenfightingsimID").innerHTML = fullscreenIDfightingsim;
+document.getElementById("fullscreenIDextermination").innerHTML = fullscreenIDextermination;
+document.getElementById("fullscreenIDteacherexe").innerHTML = fullscreenteacherexeID;
+document.getElementById("fullscreenIDinvestorrest2").innerHTML = fullscreenIDinvestorrest2;
+document.getElementById("fullscreenIDlinkopener").innerHTML = fullscreenIDlinkopener;
+introloading = document.getElementById("loadingintro");
+introloading.value = introvalue;
+
+
+}, 1);
+setInterval(function(){
+
+
+
+
+introvalue = introvalue + 1;
+
+
+if (introvalue >= 100){
+introtick = 10000000000000;
+endintro();
+}
+else if (introvalue >= 50){
+if (runonce === false){
+introtick = Math.floor(Math.random() * 150 + 1);
+
+
+runonce = true;
+}
+}
+console.log(introtick);
+
+
+}, introtick);
+function endintro(){
+menuvar.classList.add("open");
+}
+function openUpdateLog(){
+updatelogBackground.classList.add("open");
+updatelog.classList.add("open");
+}
+function closeUpdateLog(){
+updatelogBackground.classList.remove("open");
+updatelog.classList.remove("open");
+}
+function opengames(){
+gamespagevar.classList.add("open");
+menuvar.classList.remove("open");
+}
+function closegames(){
+gamespagevar.classList.remove("open");
+menuvar.classList.add("open");
+}
+window.addEventListener('keydown', (event) => {
+if (event.ctrlKey) {
+if (sidemanuvarforaddeventlistener == 0){
+sidemanuvarforaddeventlistener = 1;
+sidemenuvar.classList.add("sidemenu-open");
+}
+else if (sidemanuvarforaddeventlistener == 1){
+sidemenuvar.classList.remove("sidemenu-open");
+sidemanuvarforaddeventlistener = 0;
+}
+}
+});
+function gamlinggame(){
+gamblinggameclassvar.classList.add("open");
+}
+function closegamblinggame(){
+gamblinggameclassvar.classList.remove("open");
+}
+let fullscreening = 1;
+function fullscreengamblinggame(){
+
+
+if (fullscreening == 1){
+gamblinggameembedvar.style.width = "100" + '%';
+gamblinggameembedvar.style.height = "100" + '%';
+gamblinggameembedvar.style.left = "0" + '%';
+gamblinggameembedvar.style.top = "0" + '%';
+fullscreening = 2;
+fullscreenIDgamblinggame = "Normal screen";
+}
+else if (fullscreening == 2){
+gamblinggameembedvar.style.width = "50" + '%';
+gamblinggameembedvar.style.height = "75" + '%';
+gamblinggameembedvar.style.left = "25" + '%';
+gamblinggameembedvar.style.top = "10" + '%';
+fullscreening = 1;
+fullscreenIDgamblinggame = "Full screen";
+}
+}
+function openinvestorrest(){
+investorrestclassvar.classList.add("open");
+}
+function closeinvestorrest(){
+investorrestclassvar.classList.remove("open");
+}
+let fullscreening2 = 1;
+function fullscreeninvestorrest(){
+if (fullscreening2 == 1){
+investorrestembevar.style.width = "100" + '%';
+investorrestembevar.style.height = "100" + '%';
+investorrestembevar.style.left = "0" + '%';
+investorrestembevar.style.top = "0" + '%';
+fullscreening2 = 2;
+fullscreenIDinvestorrest = "Normal screen";
+}
+else if (fullscreening2 == 2){
+investorrestembevar.style.width = "50" + '%';
+investorrestembevar.style.height = "75" + '%';
+investorrestembevar.style.left = "25" + '%';
+investorrestembevar.style.top = "10" + '%';
+fullscreening2 = 1;
+fullscreenIDinvestorrest = "Full screen";
+}
+}
+function openfightingsim(){
+fightingsimclassvar.classList.add("open");
+}
+function closefightingsim(){
+fightingsimclassvar.classList.remove("open");
+}
+let fullscreening3 = 1;
+function fullscreenfightingsim(){
+if (fullscreening3 == 1){
+fightingsimembedvar.style.width = "100" + '%';
+fightingsimembedvar.style.height = "100" + '%';
+fightingsimembedvar.style.left = "0" + '%';
+fightingsimembedvar.style.top = "0" + '%';
+fullscreening3 = 2;
+fullscreenIDfightingsim = "Normal screen";
+}
+else if (fullscreening3 == 2){
+fightingsimembedvar.style.width = "50" + '%';
+fightingsimembedvar.style.height = "75" + '%';
+fightingsimembedvar.style.left = "25" + '%';
+fightingsimembedvar.style.top = "10" + '%';
+fullscreening3 = 1;
+fullscreenIDfightingsim = "Full screen";
+}
+}
+let fullscreening4 = 1;
+function fullscreenextermination(){
+if (fullscreening4 == 1){
+exterminationembedvar.style.width = "100" + '%';
+exterminationembedvar.style.height = "100" + '%';
+exterminationembedvar.style.left = "0" + '%';
+exterminationembedvar.style.top = "0" + '%';
+fullscreening4 = 2;
+fullscreenIDextermination = "Normal screen";
+}
+else if (fullscreening4 == 2){
+exterminationembedvar.style.width = "50" + '%';
+exterminationembedvar.style.height = "75" + '%';
+exterminationembedvar.style.left = "25" + '%';
+exterminationembedvar.style.top = "10" + '%';
+fullscreening4 = 1;
+fullscreenIDextermination = "Full screen";
+}
+}
+function openextermination(){
+exterminationclassvar.classList.add("open");
+}
+function closeextermination(){
+exterminationclassvar.classList.remove("open");
+}
+let fullscreening5 = 1;
+function fullscreenteacherexe(){
+if (fullscreening5 == 1){
+teacherexeembedvar.style.width = "100" + '%';
+teacherexeembedvar.style.height = "100" + '%';
+teacherexeembedvar.style.left = "0" + '%';
+teacherexeembedvar.style.top = "0" + '%';
+fullscreening5 = 2;
+fullscreenteacherexeID = "Normal screen";
+}
+else if (fullscreening5 == 2){
+teacherexeembedvar.style.width = "50" + '%';
+teacherexeembedvar.style.height = "75" + '%';
+teacherexeembedvar.style.left = "25" + '%';
+teacherexeembedvar.style.top = "10" + '%';
+fullscreening5 = 1;
+fullscreenteacherexeID = "Full screen";
+}
+}
+function openteacherexe(){
+teacherexeclassvar.classList.add("open");
+}
+function closeteacherexe(){
+teacherexeclassvar.classList.remove("open");
+}
+fullscreening6 = 1;
+function fullscreeninvestorrest2(){
+if (fullscreening6 == 1){
+investorrest2embedvar.style.width = "100" + '%';
+investorrest2embedvar.style.height = "100" + '%';
+investorrest2embedvar.style.left = "0" + '%';
+investorrest2embedvar.style.top = "0" + '%';
+fullscreening6 = 2;
+fullscreenIDinvestorrest2 = "Normal screen";
+}
+else if (fullscreening6 == 2){
+investorrest2embedvar.style.width = "50" + '%';
+investorrest2embedvar.style.height = "75" + '%';
+investorrest2embedvar.style.left = "25" + '%';
+investorrest2embedvar.style.top = "10" + '%';
+fullscreening6 = 1;
+fullscreenIDinvestorrest2 = "Full screen";
+}
+}
+function openinvestorrest2(){
+investorrest2classvar.classList.add("open");
+}
+function closeinvestorrest2(){
+investorrest2classvar.classList.remove("open");
+}
+
+
+
+
+
+
+function openlinkopener(){
+linkopenerclassvar.classList.add("open");
+}
+function closelinkopener(){
+linkopenerclassvar.classList.remove("open");
+}
+let fullscreening7 = 1;
+function fullscreenlinkopener(){
+if (fullscreening7 == 1){
+linkopenerembedvar.style.width = "100" + '%';
+linkopenerembedvar.style.height = "100" + '%';
+linkopenerembedvar.style.left = "0" + '%';
+linkopenerembedvar.style.top = "0" + '%';
+fullscreening7 = 2;
+fullscreenIDlinkopener = "Normal screen";
+}
+else if (fullscreening7 == 2){
+linkopenerembedvar.style.width = "50" + '%';
+linkopenerembedvar.style.height = "75" + '%';
+linkopenerembedvar.style.left = "25" + '%';
+linkopenerembedvar.style.top = "10" + '%';
+fullscreening7 = 1;
+fullscreenIDlinkopener = "Full screen";
+}
+}
+
+
+function openothers(){
+otherspagevar.classList.add("open");
+}
+
+
+function closeothers(){
+otherspagevar.classList.remove("open");
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</html>
+
+
